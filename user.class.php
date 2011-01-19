@@ -139,7 +139,7 @@ class userAuth extends PDO
                         (!in_array('mysql', $drivers) ? 'the mysql PDO driver is not available':
                         'the database host or database name is empty').'.');
                 
-                parent::_construct('mysql:dbname='. DB_NAME .';host='. DB_HOST, DB_USER, DB_PASS, 
+                parent::__construct('mysql:dbname='. DB_NAME .';host='. DB_HOST, DB_USER, DB_PASS, 
                     array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
                     
             }
